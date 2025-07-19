@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real_Time TaskManager</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+        <div class="parentConfirm">
+                 <div class="confirmation" id="confirmBox">
+                <h4>Do You realy want to remove the task</h4>
+                <button class="remove confirmRemove">Yes</button>
+                <button class="edit cancelRemove">Cancel</button>
+        </div>
+        </div>
+        <header>
+                <h1 class="headerTitle"><i>R</i>eal-Time <i>T</i>askManager</h1>
+        </header>
+        <div class="textInputArea">
+                <input id="taskInputField" placeholder="Add Task..." />
+                <button class="addtaskbtn" type="submit">Add Task</button>
+        </div>
+        <div class="categoryfilter">
+                <select>
+                        <option>All</option>
+                        <option>Pending</option>
+                        <option>Completed</option>
+                </select>
+        </div>
+        <div class="tasklistSection">
+                <div class="card">
+                        <div class="cardflex">
+                                <input type="checkbox" />
+                                <h4>Title For task Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, velit?</h4>
+                        </div>
+                        <p>Description</p>
+                        <div class="actionbtn">
+                                <button class="remove">Remove</button>
+                                <button class="edit">Edit</button>
+                        </div>
+                </div>
+        </div>
+        
+        <script src="./assets/js/script.js">
+        </script>
+</body>
+</html>

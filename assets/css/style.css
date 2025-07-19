@@ -1,0 +1,256 @@
+*{
+        box-sizing: border-box;
+}
+ body{
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+  text-align: center;
+ }
+header{
+        background-color: white;
+        padding: 2rem;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace !important;
+        overflow: hidden;
+        /* text-decoration: underline dotted; */
+}
+header h1{
+        font-size: 3rem;
+        font-weight: normal;
+        text-shadow: 5px 4px 1px  rgba(0, 0, 0, 0.2) ;
+}
+header h1 i{
+        font-family: cursive;
+        font-size: 4rem;
+        font-weight: lighter;
+        padding-top: 10px;
+}
+.textInputArea{
+        width: 100%;
+        background-color: white;
+        padding: 15px 0px;
+        border-radius: 8px;
+        position: sticky;
+        top: 5px;
+        z-index: 10;
+        box-shadow: 10px 4px 6px 5px rgba(0, 0, 0, 0.2);
+}
+.textInputArea input{
+        width: 75%;
+        height: 3rem;
+        padding: 3px 5px;
+        font-size: 1.4rem;
+        border: 2px solid #c3c0c0;
+        border-radius: 10px;
+}
+.textInputArea input:hover{
+        background-color: #f5f4f4;
+}
+.textInputArea input:focus{
+        outline: none;
+        border-color: black ;
+}
+.addtaskbtn{
+        width: 20%;
+        height: 2.9rem;
+        font-size: 1.4rem;
+        background-color: #333;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 2px;
+}
+.addtaskbtn:hover{
+        background-color: #ccc;
+        color: black;
+        border: none;
+}
+.categoryfilter{
+        width: 100%;
+        margin: 10px 0;
+        /* background-color: aqua; */
+        
+}
+.categoryfilter select{
+       width: 50%;
+       margin: auto;
+       height: 2.3rem;
+       padding: 5px;
+       font-size: 1.3em;
+       border: 2px solid #c3c0c0;
+        border-radius: 10px;
+}
+.categoryfilter select:hover{
+        background-color: #f5f4f4;
+}
+.categoryfilter select:focus{
+        outline: none;
+        border-color: black;
+}
+
+
+.tasklistSection{
+        /* background-color: white; */
+        width: 70%;
+        /* height: 200px; */
+        margin: auto;
+        
+}
+.card{
+        background-color: white;
+        padding: 10px 15px;
+        margin: 20px 10px;
+        /* border: 2px solid #c3c0c0; */
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 10px 4px 6px 5px rgba(0, 0, 0, 0.2);
+}
+.cardflex{
+display: flex;
+margin: 0;
+margin-bottom: 5px;
+
+}
+.card input {
+        width: 2em;
+        margin: 5px;
+}
+.taskComplete{
+        font-size: larger;
+        font-weight: lighter;
+        text-decoration: line-through green;
+        opacity: 0.5;
+}
+
+.card p{
+        float: left;
+        margin: 0;
+}
+.actionbtn{
+        float: right;
+}
+.actionbtn button{
+        min-width: 6rem;
+        height: 2.9rem;
+        font-size: 1.4rem;
+        background-color: #333;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 2px;
+}
+ .remove:hover{
+        border: none;
+        background-color: rgb(227, 206, 206);
+        color: black;
+}
+.edit:hover{
+        background-color: #ccc;
+        color: black;
+        border: none;
+}
+.card::after{
+        content: "";
+        display: block;
+        clear: both;
+}
+.parentConfirm{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(197, 195, 195, 0.8);
+        z-index: 11;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+}
+.confirmation{
+        /* display: none; */
+        padding: 15px;
+        margin: 8px;
+        background-color: white;
+        box-shadow: 10px 4px 26px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+
+}
+.confirmation button{
+        min-width: 6rem;
+        height: 2.9rem;
+        font-size: 1.4rem;
+        background-color: #333;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 2px;
+}
+
+@media screen and (max-width:450px){
+        header h1{
+                font-size: 1rem;
+        }
+        .tasklistSection{
+                width: 100%;
+        }
+
+         .cardflex{ 
+                flex-direction: column;
+                align-items: center;
+                
+        }
+        .cardflex input{
+                height: 2rem;
+                margin-bottom: 0;
+        }
+        .cardflex h4{
+                margin-top: 2px;
+        }
+        .actionbtn{
+                width: 100%;
+                 display: flex;
+                flex-direction: column;
+                /* align-items: center;  */
+        }
+        .actionbtn .remove ,.actionbtn .edit{
+                margin: 4px;
+                width: 98% ;
+
+        }
+        .actionbtn .edit{
+                margin-bottom: 0px;
+        }
+
+}
+
+@media screen and (max-width:700px){
+        .tasklistSection{
+                width: 100%;
+        }
+        .textInputArea input{
+                width: 98%;
+                margin: 5px ;
+        }
+        .addtaskbtn{
+                width: 98%;
+                overflow: hidden;
+        }
+        .card .cardflex input{
+                width: 3rem;
+        }
+        .actionbtn{
+                margin-top: 4px;
+                float: right;
+                width: 100%;
+                display: flex;
+        }
+        .actionbtn button{
+                width: 50%;
+        }
+}
